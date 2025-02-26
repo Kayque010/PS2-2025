@@ -1,4 +1,4 @@
-package banco;
+package banco.Conta;
 
 public class ContaInfinita extends Conta {
     public ContaInfinita(int n , double s){
