@@ -25,7 +25,7 @@ public class App {
         long nro = Long.parseLong(System.console().readLine());
         System.out.println("Novo saldo para esta conta: ");
         BigDecimal saldo = new BigDecimal(System.console().readLine());
-        String url = "jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:6543/postgres?user=postgres.txuhncbultubsliskyna&password=K@yque2025";
+        String url = "jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:6543/postgres?user=postgres.txuhncbultubsliskyna&password=";
         Connection c = DriverManager.getConnection(url);
         String sql = "UPDATE contas SET saldo=? WHERE nro_conta=?";
         PreparedStatement prepstm = c.prepareStatement(sql);
@@ -39,7 +39,7 @@ public class App {
     public static void delete() throws SQLException {
         System.out.println("Número de uma conta já existente: ");
         long nro = Long.parseLong(System.console().readLine());
-        String url = "jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:6543/postgres?user=postgres.txuhncbultubsliskyna&password=K@yque2025";
+        String url = "jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:6543/postgres?user=postgres.txuhncbultubsliskyna&password=";
         Connection c = DriverManager.getConnection(url);
         String sql = "DELETE FROM contas WHERE nro_conta=?";
         PreparedStatement prepstm = c.prepareStatement(sql);
@@ -51,7 +51,7 @@ public class App {
 
 
     public static void read() throws SQLException{
-        String url = "jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:6543/postgres?user=postgres.txuhncbultubsliskyna&password=K@yque2025";
+        String url = "jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:6543/postgres?user=postgres.txuhncbultubsliskyna&password=";
         Connection c = DriverManager.getConnection(url);
         String sql = "SELECT * FROM contas";
         PreparedStatement stm = c.prepareStatement(sql);
