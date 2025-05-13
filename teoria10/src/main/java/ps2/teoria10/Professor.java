@@ -2,6 +2,7 @@ package ps2.teoria10;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
@@ -16,7 +17,7 @@ import lombok.Setter;
 @AllArgsConstructor
 
 public class Professor {
-    @Id
+    @Id @GeneratedValue
     private Long id;
     private String nome;
     private int matricula;
